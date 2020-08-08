@@ -45,17 +45,11 @@ func (s *BaseExprListener) EnterParens(ctx *ParensContext) {}
 // ExitParens is called when production parens is exited.
 func (s *BaseExprListener) ExitParens(ctx *ParensContext) {}
 
-// EnterStringLiteral is called when production stringLiteral is entered.
-func (s *BaseExprListener) EnterStringLiteral(ctx *StringLiteralContext) {}
+// EnterIp is called when production ip is entered.
+func (s *BaseExprListener) EnterIp(ctx *IpContext) {}
 
-// ExitStringLiteral is called when production stringLiteral is exited.
-func (s *BaseExprListener) ExitStringLiteral(ctx *StringLiteralContext) {}
-
-// EnterIP is called when production IP is entered.
-func (s *BaseExprListener) EnterIP(ctx *IPContext) {}
-
-// ExitIP is called when production IP is exited.
-func (s *BaseExprListener) ExitIP(ctx *IPContext) {}
+// ExitIp is called when production ip is exited.
+func (s *BaseExprListener) ExitIp(ctx *IpContext) {}
 
 // EnterImpact is called when production impact is entered.
 func (s *BaseExprListener) EnterImpact(ctx *ImpactContext) {}
@@ -69,17 +63,59 @@ func (s *BaseExprListener) EnterIntLiteral(ctx *IntLiteralContext) {}
 // ExitIntLiteral is called when production intLiteral is exited.
 func (s *BaseExprListener) ExitIntLiteral(ctx *IntLiteralContext) {}
 
+// EnterListIn is called when production listIn is entered.
+func (s *BaseExprListener) EnterListIn(ctx *ListInContext) {}
+
+// ExitListIn is called when production listIn is exited.
+func (s *BaseExprListener) ExitListIn(ctx *ListInContext) {}
+
 // EnterAddSub is called when production addSub is entered.
 func (s *BaseExprListener) EnterAddSub(ctx *AddSubContext) {}
 
 // ExitAddSub is called when production addSub is exited.
 func (s *BaseExprListener) ExitAddSub(ctx *AddSubContext) {}
 
-// EnterListIn is called when production listIn is entered.
-func (s *BaseExprListener) EnterListIn(ctx *ListInContext) {}
+// EnterList is called when production list is entered.
+func (s *BaseExprListener) EnterList(ctx *ListContext) {}
 
-// ExitListIn is called when production listIn is exited.
-func (s *BaseExprListener) ExitListIn(ctx *ListInContext) {}
+// ExitList is called when production list is exited.
+func (s *BaseExprListener) ExitList(ctx *ListContext) {}
+
+// EnterMulDiv is called when production mulDiv is entered.
+func (s *BaseExprListener) EnterMulDiv(ctx *MulDivContext) {}
+
+// ExitMulDiv is called when production mulDiv is exited.
+func (s *BaseExprListener) ExitMulDiv(ctx *MulDivContext) {}
+
+// EnterEqual is called when production equal is entered.
+func (s *BaseExprListener) EnterEqual(ctx *EqualContext) {}
+
+// ExitEqual is called when production equal is exited.
+func (s *BaseExprListener) ExitEqual(ctx *EqualContext) {}
+
+// EnterRe is called when production re is entered.
+func (s *BaseExprListener) EnterRe(ctx *ReContext) {}
+
+// ExitRe is called when production re is exited.
+func (s *BaseExprListener) ExitRe(ctx *ReContext) {}
+
+// EnterStringLiteral is called when production stringLiteral is entered.
+func (s *BaseExprListener) EnterStringLiteral(ctx *StringLiteralContext) {}
+
+// ExitStringLiteral is called when production stringLiteral is exited.
+func (s *BaseExprListener) ExitStringLiteral(ctx *StringLiteralContext) {}
+
+// EnterReg is called when production reg is entered.
+func (s *BaseExprListener) EnterReg(ctx *RegContext) {}
+
+// ExitReg is called when production reg is exited.
+func (s *BaseExprListener) ExitReg(ctx *RegContext) {}
+
+// EnterCidr is called when production cidr is entered.
+func (s *BaseExprListener) EnterCidr(ctx *CidrContext) {}
+
+// ExitCidr is called when production cidr is exited.
+func (s *BaseExprListener) ExitCidr(ctx *CidrContext) {}
 
 // EnterId is called when production id is entered.
 func (s *BaseExprListener) EnterId(ctx *IdContext) {}
@@ -93,20 +129,8 @@ func (s *BaseExprListener) EnterLogic(ctx *LogicContext) {}
 // ExitLogic is called when production logic is exited.
 func (s *BaseExprListener) ExitLogic(ctx *LogicContext) {}
 
-// EnterList is called when production list is entered.
-func (s *BaseExprListener) EnterList(ctx *ListContext) {}
-
-// ExitList is called when production list is exited.
-func (s *BaseExprListener) ExitList(ctx *ListContext) {}
-
 // EnterBooleanLiteral is called when production booleanLiteral is entered.
 func (s *BaseExprListener) EnterBooleanLiteral(ctx *BooleanLiteralContext) {}
 
 // ExitBooleanLiteral is called when production booleanLiteral is exited.
 func (s *BaseExprListener) ExitBooleanLiteral(ctx *BooleanLiteralContext) {}
-
-// EnterMulDiv is called when production mulDiv is entered.
-func (s *BaseExprListener) EnterMulDiv(ctx *MulDivContext) {}
-
-// ExitMulDiv is called when production mulDiv is exited.
-func (s *BaseExprListener) ExitMulDiv(ctx *MulDivContext) {}

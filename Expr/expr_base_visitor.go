@@ -24,11 +24,7 @@ func (v *BaseExprVisitor) VisitParens(ctx *ParensContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseExprVisitor) VisitStringLiteral(ctx *StringLiteralContext) interface{} {
-	return v.VisitChildren(ctx)
-}
-
-func (v *BaseExprVisitor) VisitIP(ctx *IPContext) interface{} {
+func (v *BaseExprVisitor) VisitIp(ctx *IpContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -40,11 +36,39 @@ func (v *BaseExprVisitor) VisitIntLiteral(ctx *IntLiteralContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
+func (v *BaseExprVisitor) VisitListIn(ctx *ListInContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
 func (v *BaseExprVisitor) VisitAddSub(ctx *AddSubContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseExprVisitor) VisitListIn(ctx *ListInContext) interface{} {
+func (v *BaseExprVisitor) VisitList(ctx *ListContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseExprVisitor) VisitMulDiv(ctx *MulDivContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseExprVisitor) VisitEqual(ctx *EqualContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseExprVisitor) VisitRe(ctx *ReContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseExprVisitor) VisitStringLiteral(ctx *StringLiteralContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseExprVisitor) VisitReg(ctx *RegContext) interface{} {
+	return v.VisitChildren(ctx)
+}
+
+func (v *BaseExprVisitor) VisitCidr(ctx *CidrContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
@@ -56,14 +80,6 @@ func (v *BaseExprVisitor) VisitLogic(ctx *LogicContext) interface{} {
 	return v.VisitChildren(ctx)
 }
 
-func (v *BaseExprVisitor) VisitList(ctx *ListContext) interface{} {
-	return v.VisitChildren(ctx)
-}
-
 func (v *BaseExprVisitor) VisitBooleanLiteral(ctx *BooleanLiteralContext) interface{} {
-	return v.VisitChildren(ctx)
-}
-
-func (v *BaseExprVisitor) VisitMulDiv(ctx *MulDivContext) interface{} {
 	return v.VisitChildren(ctx)
 }
